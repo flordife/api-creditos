@@ -6,14 +6,14 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "prestamos")
+@Table(name = "prestamo")
 public class Prestamo {
 
     @Id //que es una PK.
     @Column(name = "prestamo_id") //Nombre con el que se mapea a la base de datos.
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Autoincremental
     private int prestamoId;
-
+    
     @Temporal(TemporalType.DATE)
     private Date fecha;
 
