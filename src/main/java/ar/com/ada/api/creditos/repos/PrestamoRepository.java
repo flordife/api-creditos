@@ -1,5 +1,9 @@
 package ar.com.ada.api.creditos.repos;
 
-public class PrestamoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import ar.com.ada.api.creditos.entities.*;
+
+public interface PrestamoRepository extends JpaRepository<Prestamo, Integer> {
     
 }
