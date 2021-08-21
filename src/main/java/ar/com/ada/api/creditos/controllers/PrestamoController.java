@@ -52,7 +52,7 @@ public class PrestamoController {
 
     // Endpoint que solo actualiza el estado a cancelado una vez que el importe
     // total de cuotas alcanza el importe total
-    @PutMapping("/prestamos/{id}/cancelaciones")
+    /*@PutMapping("/prestamos/{id}/cancelaciones")
 
     public ResponseEntity<GenericResponse> cancelarPrestamo(@PathVariable Integer id,
             @RequestBody EstadoPrestamoRequest estadoCancelado) {
@@ -68,6 +68,6 @@ public class PrestamoController {
         respuesta.message = "Préstamo se encuentra cancelado";
 
         return ResponseEntity.ok(respuesta);
-    }
+    }*/
 
 }

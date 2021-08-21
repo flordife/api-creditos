@@ -1,6 +1,5 @@
 package ar.com.ada.api.creditos.services;
 
-import java.math.BigInteger;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +28,6 @@ public class PrestamoService {
 
     public void actualizar(Prestamo prestamo) {
         repository.save(prestamo);
-    }
-
-    public void cancelarPrestamo(Prestamo prestamo) {
     }
 
 }
