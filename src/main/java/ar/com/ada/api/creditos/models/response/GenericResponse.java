@@ -1,4 +1,4 @@
-package ar.com.ada.api.creditos.models;
+package ar.com.ada.api.creditos.models.response;
 
 public class GenericResponse {
     

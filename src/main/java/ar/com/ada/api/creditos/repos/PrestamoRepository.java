@@ -7,5 +7,7 @@ import ar.com.ada.api.creditos.entities.*;
 
 @Repository
 public interface PrestamoRepository extends JpaRepository<Prestamo, Integer> {
+
+    Prestamo findByPrestamoId(Integer id);
     
 }
