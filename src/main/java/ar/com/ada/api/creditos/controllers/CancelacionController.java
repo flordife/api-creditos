@@ -1,19 +1,14 @@
 package ar.com.ada.api.creditos.controllers;
 
-import java.util.Date;
+import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
-import ar.com.ada.api.creditos.entities.Cancelacion;
-import ar.com.ada.api.creditos.entities.Prestamo;
+import org.springframework.web.bind.annotation.*;
+import ar.com.ada.api.creditos.entities.*;
 import ar.com.ada.api.creditos.models.request.InfoCancelacionNueva;
 import ar.com.ada.api.creditos.models.response.GenericResponse;
-import ar.com.ada.api.creditos.services.CancelacionService;
-import ar.com.ada.api.creditos.services.PrestamoService;
+import ar.com.ada.api.creditos.services.*;
 
 @RestController
 public class CancelacionController {
@@ -39,6 +34,12 @@ public class CancelacionController {
         respuesta.message = "La cancelación ha sido creada con éxito";
 
         return ResponseEntity.ok(respuesta);
+    }
+
+    @GetMapping("/cancelaciones")
+    public ResponseEntity<List<Cancelacion>> traerTodasLasCancelaciones() {
+        return ResponseEntity.ok(service.traerTodasLasCancelaciones());
+
     }
 
 }

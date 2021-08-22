@@ -17,7 +17,9 @@ public class Cliente {
     @Column(name = "cliente_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int clienteId;
+
     private String nombre;
+    
     @NaturalId
     private int dni;
 

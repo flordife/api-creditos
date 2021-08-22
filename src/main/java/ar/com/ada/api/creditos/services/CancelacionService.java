@@ -1,5 +1,7 @@
 package ar.com.ada.api.creditos.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,10 @@ public class CancelacionService {
 
     public void crear(Cancelacion cancelacion) {
         repo.save(cancelacion);
+    }
+
+    public List<Cancelacion> traerTodasLasCancelaciones() {
+        return repo.findAll();
     }
 
 }

@@ -7,5 +7,7 @@ import ar.com.ada.api.creditos.entities.*;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
+
+    Cliente findByClienteId(Integer id);
     
 }
